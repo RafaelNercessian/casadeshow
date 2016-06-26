@@ -10,6 +10,6 @@ public class HomeController {
 	@RequestMapping("/")
 	public String home(Model model){
 		model.addAttribute("msg","Valeu mito");
-		return "helloworld";
+		return "home";
 	}
 }
