@@ -8,6 +8,8 @@
       <tr>
         <th>Nome</th>
         <th>Descrição</th>
+        <th>Local</th>
+        <th>Cidade</th>
         <th>Data</th>
       </tr>
     </thead>
@@ -16,6 +18,8 @@
       <tr>
         <td>${evento.nome}</td>
         <td>${evento.descricao}</td>
+        <td>${evento.local}</td>
+        <td>${evento.cidade}</td>
         <td>${evento.data}</td>
         <td><a href="${s:mvcUrl('EC#detalhe').arg(0,evento.id).build()}"><span class="glyphicon glyphicon-info-sign"/></a>
       </tr>
