@@ -7,4 +7,5 @@ import com.casadeshow.modelo.Evento;
 public interface EventoDao {
 	List<Evento> listaEventos();
 	Evento buscaEvento(Integer id);
+	void adiciona(Evento evento);
 }

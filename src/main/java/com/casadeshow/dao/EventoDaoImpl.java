@@ -6,12 +6,15 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.casadeshow.modelo.Evento;
 
 @Repository
+@Scope(proxyMode = ScopedProxyMode.INTERFACES)
 public class EventoDaoImpl implements EventoDao{
 	
 	
@@ -26,6 +29,11 @@ public class EventoDaoImpl implements EventoDao{
 	
 	public Evento buscaEvento(Integer id){
 		return manager.find(Evento.class, id);
+	}
+
+	@Transactional
+	public void adiciona(Evento evento) {
+		manager.persist(evento);
 	}
 	
 }
