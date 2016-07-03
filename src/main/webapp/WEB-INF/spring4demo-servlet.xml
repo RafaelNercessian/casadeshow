@@ -14,10 +14,9 @@ http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
 	<context:component-scan base-package="com.casadeshow" />
 	
-	
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
     <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
-     
+
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

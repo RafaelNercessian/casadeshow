@@ -8,18 +8,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-@Table(name="evento")
+@Table(name = "evento")
 public class Evento implements Serializable {
 
-	
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
 	private String descricao;
@@ -73,15 +71,15 @@ public class Evento implements Serializable {
 	public String getNome() {
 		return nome;
 	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public String getDescricao() {
 		return descricao;
 	}
-	
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
@@ -93,6 +91,5 @@ public class Evento implements Serializable {
 	public void setData(String data) {
 		this.data = data;
 	}
-
 
 }

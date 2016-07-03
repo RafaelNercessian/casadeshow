@@ -26,19 +26,21 @@ public class EventoController {
 	@Autowired
 	private EventoDao dao;
 
+
 	@RequestMapping("/listaEventos")
-	public String evento(Model model) {
+	public String evento(Model model){
 		List<Evento> eventos = dao.listaEventos();
-		model.addAttribute("eventos", eventos);
+		model.addAttribute("eventos",eventos);
 		return "listaEventos";
 	}
-
+	
 	@RequestMapping("/listaEventos/detalhe/{id}")
-	public String detalhe(@PathVariable Integer id, Model model) {
+	public String detalhe(@PathVariable Integer id,Model model){
 		Evento buscaEvento = dao.buscaEvento(id);
 		model.addAttribute("evento", buscaEvento);
 		return "detalhe";
 	}
+
 
 	@RequestMapping("/adicionaEvento")
 	public String adicionaEvento(Model model) {

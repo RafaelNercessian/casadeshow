@@ -4,5 +4,8 @@
   <installed facet="java" version="1.5"/>
   <installed facet="jst.web" version="2.5"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
+<<<<<<< HEAD
   <installed facet="jpt.jpa" version="2.0"/>
+=======
+>>>>>>> ee136dbaff4fd03e7a639f3055e0fd843d0f4d2c
 </faceted-project>

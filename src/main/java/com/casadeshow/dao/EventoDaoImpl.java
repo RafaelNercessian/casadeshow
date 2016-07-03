@@ -15,24 +15,23 @@ import com.casadeshow.modelo.Evento;
 
 @Repository
 @Scope(proxyMode = ScopedProxyMode.INTERFACES)
-public class EventoDaoImpl implements EventoDao{
-	
-	
+public class EventoDaoImpl implements EventoDao {
+
 	@PersistenceContext
-    private EntityManager manager;
+	private EntityManager manager;
 
-
-	public List<Evento> listaEventos(){
-		TypedQuery<Evento> query = manager.createQuery("select e from Evento e", Evento.class);
+	public List<Evento> listaEventos() {
+		TypedQuery<Evento> query = manager.createQuery(
+				"select e from Evento e", Evento.class);
 		return query.getResultList();
 	}
-	
-	public Evento buscaEvento(Integer id){
+
+	public Evento buscaEvento(Integer id) {
 		return manager.find(Evento.class, id);
 	}
 
 	@Transactional
 	public void adiciona(Evento evento) {
 		manager.persist(evento);
-	}	
+	}
 }
